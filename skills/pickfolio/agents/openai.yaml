@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pickfolio"
+  short_description: "Evidence-first US stock research and position planning"
+  default_prompt: "Use $pickfolio to build an auditable US stock selection and position plan."

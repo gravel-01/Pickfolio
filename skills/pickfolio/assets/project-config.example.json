@@ -1,0 +1,22 @@
+{
+  "market": "US",
+  "mode": "full",
+  "as_of": null,
+  "capital": null,
+  "currency": "USD",
+  "horizon": "3-5y",
+  "max_loss_pct": null,
+  "cash_floor_pct": 15,
+  "leverage_allowed": false,
+  "benchmark": "SPY",
+  "existing_holdings": [],
+  "candidate_limit": 25,
+  "bottleneck_analysis": "required",
+  "bottleneck_scoring": "qualitative",
+  "data_policy": "refresh-missing",
+  "retain": "standard",
+  "language": "zh-CN",
+  "selection_approval": "required",
+  "position_approval": "required",
+  "execution": "disabled"
+}

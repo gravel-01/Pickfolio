@@ -1,0 +1,5 @@
+source_id,provider,entrypoint,fields,security_scope,auth,update_frequency,method,reliability_tier,known_boundaries
+SEC_SUBMISSIONS,SEC,https://data.sec.gov/submissions/CIK{cik10}.json,filings and filing dates,SEC registrants,none,per run,HTTP JSON,1,An 8-K event does not automatically update financial denominators
+SEC_COMPANYFACTS,SEC,https://data.sec.gov/api/xbrl/companyfacts/CIK{cik10}.json,structured financial facts,SEC registrants,none,new filing,HTTP JSON,1,XBRL tags and fiscal periods require filing-level verification
+COMPANY_IR,Company investor relations,company-specific,filings presentations releases and guidance,company,none or public access,new disclosure,download or browser,2,Definitions vary by company and period
+MARKET_VENDOR,Configured market-data vendor,vendor-specific,prices volume valuation estimates and ownership,configured securities,account or API key,per run,API or export,3,Preserve vendor timestamps units permissions and security-line scope
