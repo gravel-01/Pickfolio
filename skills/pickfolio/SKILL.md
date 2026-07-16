@@ -5,6 +5,8 @@ description: Evidence-first US-equity research and portfolio-positioning workflo
 
 # Pickfolio
 
+Reader translation: [简体中文对照](SKILL-zh.md).
+
 Turn US-equity data into an auditable stock-selection decision and, after explicit selection approval, a risk-bounded position plan. Preserve the distinction between evidence, calculated proxies, human judgment, and execution authority.
 
 ## Route The Request

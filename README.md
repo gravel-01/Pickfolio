@@ -1,5 +1,7 @@
 # Pickfolio
 
+[简体中文 SKILL 对照](skills/pickfolio/SKILL-zh.md)
+
 Evidence-first US stock research, selection, and position planning for Codex.
 
 Pickfolio turns a research mandate into two auditable decisions:
@@ -38,7 +40,7 @@ Retention is configurable as `minimal`, `standard`, or `audit`.
 
 ## Skill Location
 
-The installable Codex skill is in [`skills/pickfolio`](skills/pickfolio).
+The installable Codex skill is in [`skills/pickfolio`](skills/pickfolio). A complete reader-facing Chinese counterpart is available at [`SKILL-zh.md`](skills/pickfolio/SKILL-zh.md).
 
 Install it locally with:
 
