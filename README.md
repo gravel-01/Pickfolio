@@ -40,7 +40,52 @@ Reopen Codex or start a new conversation after installation.
 
 ## Usage
 
-### Run the full workflow
+### Minimal general-purpose invocation
+
+When you do not yet know which mode to choose, describe the outcome and let Pickfolio route the task:
+
+```text
+Use $pickfolio to help me complete a US-equity research task.
+Choose select, position, full, refresh, or review based on my intended outcome.
+Ask only for missing parameters that would materially change the result; use defaults
+for the rest and record them in the manifest. Respect the selection-freeze and
+position-approval gates. Do not place orders.
+```
+
+### General parameter template
+
+Replace the bracketed fields with your own information and remove fields that do not apply:
+
+```text
+Use $pickfolio to research [US theme / industry / candidate universe] and perform
+[mode or intended outcome].
+
+Research objective: [discover a direction / select stocks / plan positions /
+refresh data / review existing work]
+Input material: [holdings, candidate list, reports, data directory, or manifest path;
+write "none" when unavailable]
+Investment horizon: [for example, 1-3y or 3-5y]
+Existing holdings or prohibited overlap: [symbols or none]
+Benchmark: [for example, SPY; use the default when uncertain]
+Capital and currency: [required only for position/full]
+Maximum tolerable loss, cash floor, and leverage policy: [position/full only]
+Data cutoff: [latest or YYYY-MM-DD]
+data_policy: [reuse / refresh-missing / refresh-all]
+retain: [minimal / standard / audit]
+Output directory: [target path; otherwise create a new immutable run directory]
+
+Ask me before assuming a missing parameter that would materially change the result.
+Use documented defaults for the rest and record them explicitly. Produce research
+and position plans only; do not execute trades.
+```
+
+You may provide an explicit `select`, `position`, `full`, `refresh`, or `review` mode, or describe the desired result and let Pickfolio choose the mode.
+
+### Scenario examples
+
+The following examples show how to add constraints for concrete tasks. They are not fixed industry, capital, or allocation requirements.
+
+#### Run the full workflow
 
 ```text
 Use $pickfolio to research a US AI-infrastructure basket.
@@ -50,7 +95,7 @@ then create a position plan for USD 5,000,000 with at least 15% cash.
 Do not place orders.
 ```
 
-### Create only a stock-selection report
+#### Create only a stock-selection report
 
 ```text
 Use $pickfolio in select mode to analyze the US power-grid infrastructure theme.
@@ -58,7 +103,7 @@ Build research, watch, and comparator pools; compare names only within peer grou
 and produce selection.md without assigning portfolio weights.
 ```
 
-### Create a bottleneck analysis
+#### Create a bottleneck analysis
 
 ```text
 Use $pickfolio to map the complete AI-infrastructure bottleneck system.
@@ -67,7 +112,7 @@ node scoring, evidence requirements, existing-portfolio overlap, and the final
 research-chain narrowing decision.
 ```
 
-### Plan positions for an approved selection
+#### Plan positions for an approved selection
 
 ```text
 Use $pickfolio in position mode. Read the frozen selection manifest at
@@ -76,7 +121,7 @@ Use $pickfolio in position mode. Read the frozen selection manifest at
 stress tests, and staged evidence gates. Do not replace the selected names.
 ```
 
-### Refresh sources without changing a frozen decision
+#### Refresh sources without changing a frozen decision
 
 ```text
 Use $pickfolio in refresh mode to update the existing run to the latest completed
@@ -84,7 +129,7 @@ US trading session. Preserve a new immutable snapshot, record successful and fai
 source attempts, and produce change-report.md. Do not silently change the frozen basket.
 ```
 
-### Review an existing package
+#### Review an existing package
 
 ```text
 Use $pickfolio in review mode to audit this selection and position package.
@@ -92,7 +137,7 @@ Prioritize unsupported facts, date or security-line mismatches, invalid peer
 comparisons, missing-data treatment, gate violations, and weight reconciliation.
 ```
 
-### Choose how much intermediate data to retain
+#### Choose how much intermediate data to retain
 
 Add one of these instructions to any request:
 
